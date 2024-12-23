@@ -21,3 +21,24 @@
   display: none !important;
 }
 */
+
+/* Hide horizontal tabbar (in favor of tree style tab) */
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+  visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/* Hide tst in fullscreen */
+
+#main-window[inFullscreen] #sidebar-box {
+  display:none !important;
+  width: 0px !important;
+}
